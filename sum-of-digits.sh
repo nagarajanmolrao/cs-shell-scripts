@@ -4,20 +4,22 @@
 clear
 
 #read a number
-read -p "Enter a number : " num
+Num=123
+read -p "Enter a number : " Num
 
 #sum of digits
 sum=0
-while [ $Num > 0 ]
+while [ $Num -gt 0 ]
 do
-    # get Remainder
-    k=$(( $Num % 10 ))
+	# get Remainder
+	k=$(( $Num % 10 ))
 
-    # get next digit
-    Num=$(( $Num / 10 ))
+	# calculate sum of digits
+	sum=$(( $sum + $k ))
 
-    # calculate sum of digits
-    sum=$(( $sum + $k ))
+	#get next digit
+	Num=$(( $Num / 10 ))
+
 done
 
 #print sum
